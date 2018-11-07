@@ -44,66 +44,39 @@ plt.show()
 
 
 # # Scikit-Learn API
-
 generate_random = np.random.RandomState(0)
 x = 10 * generate_random.rand(100)
 x.shape
 x
-
 y = 1 * x + np.random.randn(100)
 y.shape
 y
-
 plt.figure(figsize = (10, 8))
 plt.scatter(x, y);
-
-
 # Step 1. Choose a class of model
-
 from sklearn.linear_model import LinearRegression
 
-
 # Step 2. Choose model hyperparameters
-
 model = LinearRegression(fit_intercept=True)
-
 model
 
 # Step 3. Arrage data into features matrix and target array
-
 X = x.reshape(100, 1)
 X.shape
 
 ## Step 4. Fit model to data
 model.fit(X, y)
-
 model.coef_
-
-
-
-
 model.intercept_
-
-
-
 # ## Step 5. Apply trained model to new data
-
 # Creating New Random Data
-
-
 x_fit = np.linspace(-1, 1)
 x_fit
-
 X_fit = x_fit.reshape(-1,1)
 x_fit
-
 y_fit = model.predict(X_fit)
 y_fit
-
-
 # ## Visualise
-
-
 plt.figure(figsize = (10, 8))
 plt.scatter(x, y)
 plt.plot(x_fit, y_fit);
