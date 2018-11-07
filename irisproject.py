@@ -3,19 +3,17 @@
 # Data Exploration and Analysis
 # By Vishal Kumar Srivastaava
 
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+import numpy as np  # Numpy Library is used for numerical operation purpose
+import pandas as pd # library to load the dataset
+import seaborn as sns # library for Visualization
+import matplotlib.pyplot as plt # library for Visualzaiton
 
 # # Iris Data from Seaborn
 
-iris = sns.load_dataset('iris')
-iris.head()
-iris.describe()
-iris.info()
-
-print(iris.groupby('species').size())
+iris = sns.load_dataset('iris')      # load the dataset from seaborn library and store in dataframe namely:-iris
+iris.head()                          # To see top 5 rows of iris
+iris.describe()                      # For Statstical Summary of Iris
+iris.info()                          # To check datatype ,no of rows,no of columns etc....
 
 ############ Visualisation ##################
 
